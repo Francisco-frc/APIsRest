@@ -7,7 +7,7 @@ import (
 )
 
 var (
-	db *gorm.DB
+	db     *gorm.DB
 	logger *Logger
 )
 
@@ -15,7 +15,7 @@ func Init() error {
 	var err error
 
 	// Intializa SQLite
-	db,err = InitializeSQLite()
+	db, err = InitializeSQLite()
 
 	if err != nil {
 		return fmt.Errorf("error initialize sqlite: %v", err)
@@ -29,7 +29,7 @@ func GetSQLite() *gorm.DB {
 }
 
 func GetLogger(p string) *Logger {
-	
+
 	//Initialize Logger
 	logger = NewLogger(p)
 	return logger
