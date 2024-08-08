@@ -6,7 +6,18 @@ import (
 	"github.com/Francisco-frc/APIsRest/schemas"
 	"github.com/gin-gonic/gin"
 )
+// @BasePath /api/v1
 
+// @Summary Create opening
+// @Description Create a new job opening
+// @tags Openings
+// @Accept json
+// @Produce json
+// @Param request body CreateOpeningRequest true "Request body"
+// @Success 200 {object} CreateOpeningResponse
+// @Failure 400 {object} ErrorResponse
+// @Failure 500 {object} ErrorResponse
+// @Router /opening [post]
 func CreatOpeningHandler(ctx *gin.Context) {
 	request := CreateOpeningRequest{}
 
