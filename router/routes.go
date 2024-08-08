@@ -1,9 +1,9 @@
 package router
 
 import (
+	docs "github.com/Francisco-frc/APIsRest/docs"
 	"github.com/Francisco-frc/APIsRest/handler"
 	"github.com/gin-gonic/gin"
-	docs "github.com/Francisco-frc/APIsRest/docs"
 	swaggerfiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
 )
@@ -11,7 +11,7 @@ import (
 func initializeRouter(router *gin.Engine) {
 	//Initialize Handler
 	handler.InitializeHandler()
-	basePath := "api/v1"
+	basePath := "/api/v1"
 	docs.SwaggerInfo.BasePath = basePath
 	v1 := router.Group(basePath)
 	{
