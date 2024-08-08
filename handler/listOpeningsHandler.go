@@ -6,7 +6,16 @@ import (
 	"github.com/Francisco-frc/APIsRest/schemas"
 	"github.com/gin-gonic/gin"
 )
+// @BasePath /api/v1
 
+// @Summary List openings
+// @Description List all job openings
+// @tags Openings
+// @Accept json
+// @Produce json
+// @Success 200 {object} ListOpeningsResponse
+// @Failure 500 {object} ErrorResponse
+// @Router /opening [get]
 func ListOpeningHandler(ctx *gin.Context) {
 	openings := []schemas.Opening{}
 
